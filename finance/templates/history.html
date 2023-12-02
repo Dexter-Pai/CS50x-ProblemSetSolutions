@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TO DO LOOP -->
+            {% for row in history | reverse %}
+            <tr>
+                <td class="text-start">{{row['symbol']}}</td>
+                <td class="text-end">{{row['shares']}}</td>
+                <td class="text-end">{{row['price']}}</td>
+                <td class="text-end">{{row['datetime']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

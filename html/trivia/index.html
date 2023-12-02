@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                var buttons = document.getElementsByClassName('button');
+                for (var i=0 ; i < buttons.length ; i++)
+                {
+                    (function(index)
+                    {
+                        if (index == 2)
+                        {
+                            buttons[index].onclick = function()
+                            {
+                                // alert("I am button " + index);
+                                this.style.backgroundColor = "Green";
+                                document.getElementById("q1").style.display = "Block";
+                            };
+                        }
+                        else
+                        {
+                                buttons[index].onclick = function()
+                            {
+                                // alert("I am button " + index);
+                                this.style.backgroundColor = "Red";
+                                document.getElementById("q1").style.display = "Block";
+                                document.getElementById("q1").innerHTML = "Incorrect";
+                            };
+                        }
+                    })(i)
+                }
+                // let textBox = document.getElementById("q2");
+                // document.querySelector("#buttonbutton").addEventListener("click", function(){
+                //     if (textBox.value == "my name")
+                //     {
+                //         document.getElementById("q3").innerHTML = "Correct";
+                //         document.getElementById("q3").style.display = "Block";
+                //     }
+                //     else if (textBox.value != "my name")
+                //     {
+                //         document.getElementById("q3").innerHTML = "Incorrect";
+                //         document.getElementById("q3").style.display = "Block";
+                //     }
+                // })
+
+                // function jsfunction(){
+                //     return false;
+                // }
+                // document.querySelector("#Button1").addEventListener("click", changeColor);
+                // document.querySelector("#Button2").addEventListener("click", changeColor);
+                // document.querySelector("#Button3").addEventListener("click", changeColor);
+                // document.querySelector("#Button4").addEventListener("click", changeColor);
+
+                // function changeColor()
+                // {
+                //     // this.style.backgroundColor = "Red";
+                //     this.style.backgroundColor = "Red";
+                // };
+            });
+
+            function check(){
+                    let l = document.getElementById("q2").value;
+                    if (l == "my name")
+                    {
+                        document.getElementById("q3").innerHTML = "Correct";
+                        document.getElementById("q3").style.display = "Block";
+                    }
+                    else
+                    {
+                        document.getElementById("q3").innerHTML = "Incorrect";
+                        document.getElementById("q3").style.display = "Block";
+                    }
+                }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    How many continents are there in the world?
+                </h3>
+                <p id="q1" style = "display : none;">
+                    Correct!
+                </p>
+                <button class="button" id="Button1">
+                    5
+                </button>
+                <button class="button" id="Button2">
+                    6
+                </button>
+                <button class="button" id="Button3">
+                7
+                </button>
+                <button class="button" id="Button4">
+                8
+                </button>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What's your name?
+                </h3>
+                <p id="q3" style = "display : none;">Correct!</p>
+                <form onsubmit = "check(); return false;">
+                    <input id = "q2">
+                    <button id = "buttonbutton">Send Answer</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

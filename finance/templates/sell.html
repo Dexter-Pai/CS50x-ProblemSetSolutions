@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Sell
+{% endblock %}
+
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name="symbol" required>
+                <option disabled selected value=''>Symbol</option>
+
+                {% for row in data %}
+                    <option value="{{row['symbol']}}">{{row['symbol']}}</option>
+                {% endfor %}
+<!--
+                    <option value="GOOG">GOOG</option>
+
+                    <option value="NFLX">NFLX</option> -->
+                    <!-- Loop for symbols -->
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" min="0" name="shares" placeholder="Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{%endblock %}

@@ -1,0 +1,9 @@
+import os
+
+print("Input two values to add them")
+x = int(input("x: "))
+y = int(input("y: "))
+
+os.system('clear')
+
+print(f"The answer of adding", x, "+", y, "is :",x + y)

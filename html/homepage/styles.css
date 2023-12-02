@@ -1,0 +1,228 @@
+html {
+    overflow-y: scroll;
+}
+
+
+.ide {
+    height: 1000px;
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+#sideBar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+
+#sideBar a {
+    padding: 10px 10px 10px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+#sideBar a:hover {
+    color: #ffffff;
+}
+
+
+#header {
+    background-color: #2E3138;
+    width: 100%;
+    height: 80px;
+}
+
+
+#open_sideBar {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    user-select: none;
+    width: 10%;
+    float: left;
+    color: #CCC9E7;
+}
+
+
+#icons {
+    top: 33%;
+    color: #CCC9E7;
+    width: auto;
+    display: inline;
+    margin: auto;
+    white-space: nowrap;
+    float: right;
+    margin-right: 1%;
+}
+
+
+#test {
+    top: 33%;
+    display: inline;
+    margin-left: 10%;
+    width: auto;
+    float: left;
+    color: white;
+    white-space: nowrap;
+    visibility: hidden;
+}
+
+
+#main {
+    /* -webkit-transition: margin-left 1s linear;
+    -khtml-transition: margin-left 1s linear;
+    -moz-transition: margin-left 1s linear;
+    -ms-transition: margin-left 1s linear;
+    transition: margin-left 1s linear; */
+    transition: 0.5s;
+}
+
+
+#spacer {
+    width: 30%;
+    display: inline;
+}
+
+
+#spacer1 {
+    height: 24px;
+    width: 30%;
+    display: inline-block;
+}
+
+
+#spacer2 {
+    height: 24px;
+    width: 70%;
+    display: inline-block;
+    float: right;
+    display: flex;
+}
+
+
+#underline {
+    margin: auto;
+    margin-top: 0;
+    height: 5px;
+    padding: 3px;
+    width: 40%;
+    background: #856A5D;
+    border-radius: 50px;
+}
+
+
+#close_side_bar {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+#display {
+    float: right;
+    top: 100px;
+    position: relative;
+}
+
+
+#picture{
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+    /* -moz-box-shadow:inset 0px 0px 6px 6px rgba(255,255,255,1);
+    -webkit-box-shadow:inset 0px 0px 6px 6px rgba(255,255,255,1);
+    box-shadow:inset 0px 0px 6px 6px rgba(255,255,255,1); */
+    /* object-fit: cover; */
+    float: left;
+}
+
+
+#vertical {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    border-right: 5px solid;
+    border-color: #856A5D;
+    float: right;
+    border-radius: 50px;
+}
+
+
+#text {
+    display: inline-block;
+    width: 70%;
+    margin:auto;
+    height: auto;
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+    font-size: 34px;
+    padding: 30px;
+}
+
+
+@media screen and (max-height: 500px) {
+    #sideBar {padding-top: 15px;}
+    #sideBar a {font-size: 18px;}
+    #close_side_bar {right: 10px;}
+}
+
+
+.table td {
+    padding: 30px;
+    text-align: left;
+}
+
+.spacer3 {
+    height: 50px;
+}
+
+
+#otherFamily {
+    font-size: 30px;
+    padding: 40px;
+}
+
+
+#otherFamily hr {
+    border: 5px solid #856A5D;
+    border-opacity: 100%;
+    border-radius: 5px;
+}
+
+
+#otherFamily .left {
+    text-align: left;
+}
+
+#otherFamily .right {
+    text-align: right;
+}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <ul>
+        {% for name, sports in applicants.items() %}
+        <li>{{name}} is registered for {{sports}}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

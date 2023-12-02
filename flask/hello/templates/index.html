@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <form action="/greet" method="get">
+        <input name="name" autofocus placeholder="Your Name">
+        <br>
+        <input name="age" placeholder="Your Age">
+        <br>
+        <button type="submit">Greet</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+sort1 uses: Bubble sort
+
+How do you know?: random50000.txt 7.708s, 6.894s, 0.175s
+                reversed50000.txt 5.714s, 5.058s, 0.175s
+                  sorted50000.txt 0.401s, 0.049s, 0.163s
+It is slowest on random, but fast on already sorted items.
+
+sort2 uses: Merge sort
+
+How do you know?: random50000.txt 0.536s, 0.038s, 0.175s
+                reversed50000.txt 0.551s, 0.045s, 0.159s
+                  sorted50000.txt 0.461s, 0.056s, 0.137s
+It is fast on every test.
+
+sort3 uses: Selection sort
+
+How do you know?: random50000.txt 3.122s, 2.619s, 0.148s
+                reversed50000.txt 3.578s, 2.717s, 0.188s
+                  sorted50000.txt 3.272s, 2.701s, 0.156s
+It is slow on every test.
